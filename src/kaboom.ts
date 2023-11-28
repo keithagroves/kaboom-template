@@ -6,6 +6,7 @@ export const k: any = kaboom({
     fullscreen: true,
     clearColor: [ 0, 0, 0, 1 ],
     debug: true,
+    background: [ 200, 230, 230, ],
 });
 
 export default k;

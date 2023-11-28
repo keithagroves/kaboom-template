@@ -4,14 +4,38 @@ export const mainScene = (): void => {
     const {
         add,
         height,
-        origin,
         pos,
-        text,
-        width
+        width,
+        anchor,
+        loadSprite,
+        sprite,
+        area,
+        body,
+        onKeyDown,
     } = k;
-    add([
-        text('KABOOM STARTER TEMPLATE!', 32),
+    loadSprite("bean", "bean.png");
+
+    const player = add([
+        sprite("bean"),
+				area(),
+				body(),
         pos(width() / 2, height() / 2),
-        origin('center')
+        anchor("center")
     ]);
+
+
+    // keypresses
+    onKeyDown("a", () => {
+        player.move(-120, 0);
+    })
+    onKeyDown("d", () => {
+        player.move(120, 0);
+    })
+    onKeyDown("s", () => {
+        player.move(0, 120);
+    })
+    onKeyDown("w", () => {
+        player.move(0, -120);
+    })
+
 };
