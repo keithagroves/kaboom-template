@@ -11,6 +11,7 @@
     "dev": "parcel index.html",
     "build": "parcel build dist",
     "lint": "eslint . --ext .ts && stylelint '**/*.scss'",
+    "lint:fix": "eslint . --ext .ts --fix && stylelint '**/*.scss' --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kiffin Gish <kiffin.gish@planet.nl> (https://github.com/kgish)",

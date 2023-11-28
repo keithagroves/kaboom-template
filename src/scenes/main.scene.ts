@@ -27,15 +27,15 @@ export const mainScene = (): void => {
     // keypresses
     onKeyDown("a", () => {
         player.move(-120, 0);
-    })
+    });
     onKeyDown("d", () => {
         player.move(120, 0);
-    })
+    });
     onKeyDown("s", () => {
         player.move(0, 120);
-    })
+    });
     onKeyDown("w", () => {
         player.move(0, -120);
-    })
+    });
 
 };
