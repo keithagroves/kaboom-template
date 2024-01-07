@@ -12,15 +12,22 @@ export const mainScene = (): void => {
         area,
         body,
         onKeyDown,
+        scale,
     } = k;
-    loadSprite("bean", "bean.png");
-
+    loadSprite("pirate", "pirate.png");
+    loadSprite('background', 'map.jpg');
+     add([
+        sprite('background'),
+        pos(-100, -1000),
+        scale(3)
+    ]);
     const player = add([
-        sprite("bean"),
+        scale(8),
+        sprite("pirate"),
 				area(),
 				body(),
         pos(width() / 2, height() / 2),
-        anchor("center")
+        anchor("center"),
     ]);
 
 
